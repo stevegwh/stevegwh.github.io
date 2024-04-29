@@ -1,29 +1,45 @@
 body {
-    margin-left: 2%;
-    margin-right: 2%;
+    display: flex;
+    justify-content: center;
     background-color: #f8f8f8;
-}
-
-@media (min-width: 768px) {
-    body {
-        margin-left: 5%;
-        margin-right: 5%;
+  }
+  
+  .page-container {
+    max-width: 1000px;
+    padding: 0 2px;
+    width: 100%;
+  }
+  
+  @media (min-width: 576px) {
+    .page-container {
+      padding: 0 2px;
     }
-}
-
-@media (min-width: 992px) {
-    body {
-        margin-left: 20%;
-        margin-right: 20%;
+  }
+  
+  @media (min-width: 768px) {
+    .page-container {
+      padding: 0 10px;
     }
-}
+  }
+  
+  @media (min-width: 992px) {
+    .page-container {
+      padding: 0 20px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .page-container {
+      padding: 0 40px;
+    }
+  }
 
 #page-header {
     padding: 2em 0;
 }
 
 .profile-image {
-    height: 8em; /* Adjust the height as needed */
+    height: 8em;
     width: auto;
     border-radius: 95%;
 }
@@ -78,6 +94,10 @@ body {
     font-size: 1.1em;
     color: #666;
     line-height: 1.6;
+}
+
+.about-me {
+    text-align: left;
 }
 
 .page-title {
@@ -146,6 +166,9 @@ body {
     background-color: #f0f0f0;
     padding: 1em;
     border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 767px) {
@@ -164,13 +187,12 @@ body {
 .project-screenshot {
     object-fit: cover;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
+    height: 224px;
 }
 
 @media (min-width: 576px) {
     .project-screenshot {
-        height: 448px;
+        height: 336px;
     }
 }
 

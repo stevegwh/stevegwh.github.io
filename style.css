@@ -1,0 +1,161 @@
+body {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #f8f8f8;
+}
+
+#page-header {
+    padding: 2em 0;
+}
+
+.profile-image {
+    height: 8em; /* Adjust the height as needed */
+    width: auto;
+    border-radius: 95%;
+}
+
+#page-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 0.2em;
+}
+
+#page-header h4 {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.social-link {
+    margin-left: 0.5em;
+}
+
+#page-navigation {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #fff;
+    padding: 1em 0;
+    border-radius: 5px;
+}
+
+#projects {
+    margin-top: 2em;
+}
+
+.intro {
+    background-color: #f0f0f0;
+    padding: 2em 0;
+    border-radius: 5px;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin-left: 5%;
+}
+
+.intro-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+.projects-divider {
+    border: none;
+    border-top: 2px solid #ededed;
+    margin-bottom: 1em;
+}
+
+.project {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.3125em;
+}
+
+.project-link {
+    margin-bottom: 0.3125em;
+}
+
+.project-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.project-link a:hover {
+    text-decoration: underline;
+}
+
+.project-technologies {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 0.1875em;
+}
+
+.project-type {
+    font-size: 0.875em;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.project-screenshot-wrapper {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.project-screenshots {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 95%;
+}
+
+.project-screenshot {
+    object-fit: cover;
+    height: 498px;
+}
+
+.project-description {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+
+#page-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 2em;
+}
+
+.return-home {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}

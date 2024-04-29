@@ -1,6 +1,6 @@
 body {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 2%;
+    margin-right: 2%;
     background-color: #f8f8f8;
 }
 
@@ -151,7 +151,27 @@ body {
 
 .project-screenshot {
     object-fit: cover;
-    height: 498px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+@media (min-width: 768px) {
+    .project-screenshot {
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .project-screenshot {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-screenshot {
+        height: 500px;
+    }
 }
 
 .project-description {

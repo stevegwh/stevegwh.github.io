@@ -1,7 +1,21 @@
 body {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 0;
+    margin-right: 0;
     background-color: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 
 #page-header {

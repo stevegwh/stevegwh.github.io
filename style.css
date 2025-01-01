@@ -333,6 +333,10 @@ body {
     margin-left: -30px;
 }
 
+#rend3d-banner-img {
+    margin-left: 10px;
+}
+
 .project-banner .overlay {
 	font-weight: bold;
     position: absolute;
@@ -352,4 +356,20 @@ body {
 .project-banner:hover .overlay {
     opacity: 1;
     filter: none;
+}
+
+.project-title-img-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.project-title-img {
+    height: 12em;
+}
+
+.video-view-more {
+    font-size: 1em;
+    color: #696969;
+    font-style: italic;
+    text-align: center;
 }

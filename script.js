@@ -7,6 +7,8 @@ function showProject(elementId) {
     var projectList = document.getElementsByClassName('project');
     var alreadyActive = false;
     var targetElement = document.getElementById(elementId);
+    var returnElement = document.getElementById("project-return");
+    
     for (var i = 0; i < projectList.length; i++) {
         if (projectList[i] == targetElement)
         {
@@ -17,14 +19,19 @@ function showProject(elementId) {
         }
         projectList[i].style.display = 'none';
     }
+    
     if (!alreadyActive)
     {
         targetElement.style.display = 'block';
     }
+    else
+    {  
+        returnElement.style.display = 'none';
+        return;
+    }
     
     if (projectList.length > 0)
     {
-        var returnElement = document.getElementById("project-return");
         if (returnElement.style.display = 'none')
         {
             returnElement.style.display = 'block';

@@ -364,7 +364,7 @@ body {
 }
 
 .project-title-img {
-    height: 12em;
+    width: 100%;
 }
 
 .video-view-more {

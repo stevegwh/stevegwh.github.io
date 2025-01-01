@@ -22,19 +22,25 @@ function showProject(elementId) {
         targetElement.style.display = 'block';
     }
     
-    var returnElement = document.getElementById("project-return");
-    if (returnElement.style.display = 'none')
+    if (projectList.length > 0)
     {
-        returnElement.style.display = 'block';
+        var returnElement = document.getElementById("project-return");
+        if (returnElement.style.display = 'none')
+        {
+            returnElement.style.display = 'block';
+        }
+        else
+        {
+            returnElement.style.display = 'none';
+        }
     }
-    else
-    {
-        returnElement.style.display = 'none';
-    }
+
+
 }
   
   window.addEventListener('DOMContentLoaded', function() {
     var elementId = localStorage.getItem('scrollToElement');
+    showProject(elementId);
     if (elementId) {
       var targetElement = document.getElementById(elementId);
       if (targetElement) {

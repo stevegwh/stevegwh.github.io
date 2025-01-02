@@ -251,10 +251,7 @@ body {
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
-    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 0.25rem;
-    opacity: 0.85;
-    transition: opacity 0.2s ease;
 }
 
 @media (min-width: 48em) {
@@ -285,14 +282,6 @@ body {
     }
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover,
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-    opacity: 1;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
 .carousel-control-prev:focus,
 .carousel-control-next:focus {
     outline: none;
@@ -303,11 +292,6 @@ body {
 .carousel-control-next-icon {
     border-radius: 0.25rem;
     padding: 0.625rem;
-}
-
-.carousel-control-prev:focus .carousel-control-prev-icon,
-.carousel-control-next:focus .carousel-control-next-icon {
-    opacity: 1;
 }
 
 #project-banner-section {
@@ -373,3 +357,4 @@ body {
     font-style: italic;
     text-align: center;
 }
+

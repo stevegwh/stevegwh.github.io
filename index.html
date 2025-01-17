@@ -137,15 +137,14 @@
                             <p>In this demo, the player awakens in a cave and must navigate through a goblin cult that has occupied an underground dungeon. The player must repair a lever that opens their escape route through a series of quest chains to leave the dungeon area. Due to this, the demo was dubbed 'LeverQuest.'</p>
                             <h3>Features</h3>
                             <ul>
-                                <li>Dialog system with custom markup language and parser for quest logic and conditionals.</li>
-                                <li>Custom UI Library imitating HTML table layout logic, including the ability to drag and drop icons contextually.</li>
-                                <li>Multi-unit A*/BFS Pathfinding system with navigation resolution.</li>
-                                <li>3D billboarded particle system.</li>
-                                <li>JSON/Binary serialisation.</li>
-                                <li>Quest system with event handling.</li>
-                                <li>Lighting system.</li>
+                                <li>Dialogue and quest system with <a href="https://raw.githubusercontent.com/stevegwh/raylib-arpg/refs/heads/main/resources/dialog/arissa.txt">custom markup language</a> and parser for <a href="https://github.com/stevegwh/raylib-arpg/blob/main/core/src/QuestManager.cpp">quest logic</a> and <a href="https://github.com/stevegwh/raylib-arpg/blob/main/core/utils/ParsingHelpers.cpp">conditionals</a>.</li>
+                                <li><a href="https://github.com/stevegwh/raylib-arpg/blob/main/core/src/GameUiEngine.cpp">Custom UI Library</a> imitating HTML table layout logic, including the ability to drag and drop icons contextually.</li>
+                                <li><a href="https://github.com/stevegwh/raylib-arpg/blob/main/core/src/systems/NavigationGridSystem.cpp">Multi-unit A*/BFS Pathfinding system</a> with navigation resolution.</li>
+                                <li><a href="https://github.com/stevegwh/raylib-arpg/blob/main/core/src/abilities/vfx/ParticleSystem.cpp">3D billboarded particle system</a>.</li>
+                                <li><a href="https://github.com/stevegwh/raylib-arpg/blob/main/core/utils/raylib-cereal.hpp">JSON/Binary serialisation</a>.</li>
+                                <li><a href="https://github.com/stevegwh/raylib-arpg/blob/main/resources/shaders/custom/include/lighting.fs">Lighting system</a>.</li>
                                 <li>Inventory/item system with equippable items.</li>
-                                <li>Blender-to-engine asset pipeline.</li>
+                                <li><a href="https://github.com/stevegwh/raylib-arpg/blob/main/respacker/ResourcePacker.cpp">Blender-to-engine asset pipeline</a>.</li>
                             </ul>
                             <h3>Video & Screenshots</h2>
                         </div>
@@ -208,17 +207,17 @@
                             <ul>
                             <li><code>glm</code> was not used for this project. Instead, I created the following:</li>
                             <li><ul>
-                            <li><code>slib</code> - A helper library. Contains mutliple vector/matrix classes with operators overloaded for convenience.</li>
+                            <li><code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/slib.cpp">slib</a></code> - A helper library. Contains mutliple vector/matrix classes with operators overloaded for convenience.</li>
                             </ul>
                             </li>
                             <li><ul>
-                            <li><code>smath</code> - A maths library. Can generate all necessary matricies for the renderer.</li>
+                            <li><code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/smath.cpp">smath</a></code> - A maths library. Can generate all necessary matricies for the renderer.</li>
                             </ul>
                             </li>
-                            <li>Model/material loading. <code>ObjParser</code> parses and loads <code>obj</code> files and their accompanying <code>mtl</code> files into the <code>renderable</code> class used by the renderer.</li>
-                            <li>Full rendering pipeline. <code>Renderer</code> takes the 3D model data provided as a <code>Renderable</code> and puts it through the pipeline to convert it to screen space coordinates.</li>
+                            <li>Model/material loading. <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/ObjParser.cpp">ObjParser</a></code> parses and loads <code>obj</code> files and their accompanying <code>mtl</code> files into the <code>renderable</code> class used by the renderer.</li>
+                            <li>Full rendering pipeline. <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Renderer.cpp">Renderer</a></code> takes the 3D model data provided as a <code>Renderable</code> and puts it through the pipeline to convert it to screen space coordinates.</li>
                             <li>Z-Buffer implementation.</li>
-                            <li>Triangle rasterization. <code>Rasterizer</code> takes the data provided from the renderer and fills the triangle accordingly with the edge-finding algorithm (not scanline).<ul>
+                            <li>Triangle rasterization. <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Rasterizer.cpp">Rasterizer</a></code> takes the data provided from the renderer and fills the triangle accordingly with the edge-finding algorithm (not scanline).<ul>
                             <li>Texturing is implemented and is read from the <code>mtl</code> files provided. (Textures must be png files).</li>
                             <li>Two texture filtering algorithms - either nearest neighbour or bilinear filtering.</li>
                             <li>Two shading algorithms - either flat or gouraud shading.</li>

@@ -357,4 +357,7 @@ body {
     font-style: italic;
     text-align: center;
 }
-
+.copyright-notice {
+    font-size: 0.8em;
+    font-style: italic;
+}

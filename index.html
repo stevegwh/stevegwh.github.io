@@ -17,10 +17,10 @@
 
 <body>
     <div class="page-container">
-        <div class=".container-fluid">
+        <div class="container-fluid">
             <div id="page-header" class="row align-items-center"> <!-- header -->
                 <div class="col-auto">
-                    <img src="img/steve-profile-image Small.png" alt="Steve Wheeler" class="profile-image">
+                    <img src="img/steve-profile-image%20Small.png" alt="Steve Wheeler" class="profile-image">
                 </div>
                 <div class="col">
                     <h1>Steve Wheeler</h1>
@@ -70,83 +70,46 @@
                     <div class="intro-content">
                         <h2 class="intro-title">Welcome</h2>
                         <p class="intro-text">
-                            Here you can find a mixture of <a href="index.html"
-                                onclick="scrollToTargetOnLoad('projects')">personal, professional and research
-                                projects.</a> You can also find more of my work featured on my <a
-                                href="https://github.com/stevegwh">GitHub</a> or learn more about me and my background
-                            <a href="about.html">here.</a>
-                        </p>
-                        <p class="intro-text">
-                            I finished my PhD in Human Interface Technology at the <a
-                                href="https://www.hitlabnz.org/">HIT Lab NZ </a> and am now based in my home country of
-                            the UK, in Cambridge. I am currently working as a programmer and designer, producing quests
+                            Hi, I'm Steve - a gameplay designer and programmer currently producing quests
                             and other content for the MMORPG <a
                                 href="https://store.steampowered.com/app/2791440/Brighter_Shores/">Brighter Shores</a>,
-                            working at <a href="https://fenresearch.com/">Fen Research</a>.
+                            working at <a href="https://fenresearch.com/">Fen Research</a>. You can find more of my work on
+                            my <a href="https://github.com/stevegwh">GitHub</a> or learn more about me and my background
+                            <a href="about.html">here.</a>
+                            </p>
+                            <p class="intro-text">
                             I'd love to network with fellow game enthusiasts and
-                            professionals. <a href="mailto:sgwheeler-work@quickpost.info">Please feel free to reach out
-                                via e-mail or on social media (links above).</a>
+                            professionals. Please feel free to reach out
+                            <a href="mailto:sgwheeler-work@quickpost.info">via e-mail</a> or on social media (links above).
                         </p>
                     </div>
                 </div>
                 <div id="projects">
-                    <h2 class="page-title">Notable Projects</h2>
-                    <div>
-                        <div id="project-intro">
-                            <p class='intro-text'>Select a project below to see more information.</p>
+                    <h2 class="page-title">Featured Work</h2>
+                    <div class="featured-project">
+                        <a class="featured-project-img-wrapper" href="#featured-project-container"
+                            onclick="showProject('project-brightershores')">
+                            <img class="featured-project-img" src="banners/brightershores.png" alt="Brighter Shores" />
+                        </a>
+                        <div class="featured-project-content">
+                            <div class="project-type">Professional Project · Proprietary Engine</div>
+                            <h3>Brighter Shores</h3>
+                            <p>
+                                Gameplay programmer and designer on a live MMORPG, leading quest design, boss encounters,
+                                seasonal events, and systemic content.
+                            </p>
+                            <h4>Shipped Work</h4>
+                            <p class="impact-preamble">Lead developer of the following major pieces of content:</p>
+                            <ul class="impact-list">
+                                <li><i>The Maintenance Crew</i>, a quest with the game's first real-time puzzles, and introduced a large-scale boss encounter with unique mechanics.</li>
+                                <li><i>Filtration Station</i>, the game's first large-scale real-time minigame, featuring eight different game modes and four difficulty levels.</li>
+                                <li><i>2026 Easter event</i>, a seasonal quest involving real-time mechanics spanning multiple locations.</li>
+                            </ul>
+                            <a class="project-detail-link" href="#featured-project-container"
+                                onclick="showProject('project-brightershores')">View project details</a>
                         </div>
                     </div>
-                    <div id='project-banner-section'>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-brightershores')">
-                                <img class="project-banner-img" width="100%" src="banners/brightershores.png"
-                                    alt="Brighter Shores" />
-                                <div class="overlay">Brighter Shores<br>(Proprietary Engine)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-ray')">
-                                <img class="project-banner-img" width="100%" src="banners/raylib.jpg"
-                                    alt="Action RPG" />
-                                <div class="overlay">RPG Engine<br>(C++)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-3d')">
-                                <img id="rend3d-banner-img" class="project-banner-img" width="100%"
-                                    src="banners/3drend.png" alt="3D Software Renderer" />
-                                <div class="overlay">3D Software Renderer<br>(C++)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-vrle')">
-                                <img class="project-banner-img" width="100%" src="banners/vr-wildfire.jpg"
-                                    alt="VR Wildfire" />
-                                <div class="overlay">VR Firefighter Training<br>(Unity)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-security')">
-                                <img class="project-banner-img" width="100%" src="banners/vr-security.png"
-                                    alt="VR Security" />
-                                <div class="overlay">VR Security Training<br>(Unity)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-powr')">
-                                <img class="project-banner-img" width="100%" src="banners/powr.png" alt="POWR" />
-                                <div class="overlay">POWR<br>(Unity)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('gamejam-doki')">
-                                <img class="project-banner-img" width="100%" src="banners/doki.png"
-                                    alt="DOKI DOKI Mouse" />
-                                <div class="overlay">Doki Doki Mouse<br>(Unity)</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div id='project-container'>
+                    <div id='featured-project-container'>
                         <div class="project" id="project-brightershores">
                             <div class="project-title">Brighter Shores (2025 - Present)</div>
                             <div class="project-link"><a href="https://www.brightershores.com/">Official Website</a>
@@ -154,7 +117,7 @@
                             <div class="project-technologies">Proprietary Engine</div>
                             <div class="project-type">Professional Project</div>
                             <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/brightershores.png" /></div>
+                                    src="banners/brightershores.png" alt="Brighter Shores" /></div>
                             <div class="project-description">
                                 <p>Programmer and designer for the MMORPG <i><a
                                             href="https://store.steampowered.com/app/2791440/Brighter_Shores/">Brighter
@@ -162,27 +125,33 @@
                                     the original creators of <i>RuneScape</i>.
                                 </p>
 
-                                <h3>Key Contributions</h3>
+                                <h3>Shipped Work and Key Contributions</h3>
                                 <ul>
-					<li><strong><a href="https://brightershoreswiki.org/w/2026_Easter_event">Easter 2026 Event</a>:</strong> Lead developer for the Easter 2026 event.</li>
-                                    <li><strong><a href="https://brightershoreswiki.org/w/The_Maintenance_Crew">'The Maintenance Crew'</a> Quest:</strong> Lead developer for this quest,
-                                        featuring real-time skill-based puzzles and introduced the game's first
-                                        large-scale boss fight with multiple phases and novel mechanics. <br>
-                                        Responsibilities included:
+                                    <li><strong><a href="https://brightershoreswiki.org/w/Runaway_Rabbits_(Easter_2026)">Easter 2026 Event</a>:</strong> Lead Developer. A seasonal scavenger hunt quest about tracking down runaway rabbits.
                                         <ul>
-                                            <li>Narrative design and cutscene composition.</li>
-                                            <li>Dialogue and character creation.</li>
-                                            <li>Puzzle design and implementation.</li>
-                                            <li>Boss design and implementation (for 'Krakanaxa').</li>
+                                            <li>Responsible for the quest's story, theme and objectives.</li>
+                                            <li>Responsible for the mapping of the 'Rabbit Cafe' and the dialogue of its patrons.</li>
+                                            <li>Design and implementation of the core gameplay mechanic: the rabbit herding and capture system.</li>
+                                            <li>Balancing of 70 unique rabbit locations across the game's four major areas.</li>
                                         </ul>
                                     </li>
-                                    <li><strong><a href="https://brightershoreswiki.org/w/Filtration_Station">Filtration Station Minigame</a>:</strong> Designing, implementing, and
-                                        balancing the game's first large-scale minigame..</li>
-                                    <li><strong>Project Milestone:</strong> Collaborated extensively with the balancing
-                                        team on a major design and balance overhaul of the game's core systems, aimed at
-                                        incentivising player engagement and enjoyment.</li>
+                                    <li><strong><a href="https://brightershoreswiki.org/w/The_Maintenance_Crew">'The Maintenance Crew'</a>:</strong> Lead Developer. A large-scale quest featuring multiple puzzles, bosses and cutscenes.
+                                        <ul>
+                                            <li>Narrative/character design, all quest dialogue and cutscene composition.</li>
+                                            <li>Puzzle design and implementation, including real-time navigation challenges, and environmental hazards.</li>
+                                            <li>Boss design and implementation, including a multi-phase boss with multiple novel mechanics.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong><a href="https://brightershoreswiki.org/w/Filtration_Station">Filtration Station</a>:</strong> Lead Developer. Brighter Shores' first repeatable minigame with varying rules and difficulty.
+                                        <ul>
+                                            <li>Owned the design and implementation of the minigame from concept to release.</li>
+                                            <li>Created the game's core mechanics and systems and interated upon them, resulting in eight unique game modes with progressive unlocks.</li>
+                                            <li>Tuned difficulty scaling across four levels.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Project Milestone:</strong> Helped with implementation and balance work for the wider Milestones update.</li>
                                 </ul>
-                                <h3>Video & Screenshots</h2>
+                                <h3>Video & Screenshots</h3>
                                     <span class="copyright-notice">All images below are sourced from the Brighter Shores
                                         Wiki (<a
                                             href="https://brightershoreswiki.org/">https://brightershoreswiki.org/</a>),
@@ -201,6 +170,7 @@
                                         <li data-target="#carousel-bs" data-slide-to="3"></li>
                                         <li data-target="#carousel-bs" data-slide-to="4"></li>
                                         <li data-target="#carousel-bs" data-slide-to="5"></li>
+                                        <li data-target="#carousel-bs" data-slide-to="6"></li>
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -239,6 +209,12 @@
                                                     class="d-block w-100 project-screenshot"
                                                     src="img/projects/bs/04.png" alt="Fifth slide"></a>
                                         </div>
+                                        <div class="carousel-item">
+                                            <a href="img/projects/bs/05.png"><img
+                                                    class="d-block w-100 project-screenshot project-screenshot-contain"
+                                                    src="img/projects/bs/05.png"
+                                                    alt="Brighter Shores Filtration Station minigame"></a>
+                                        </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carousel-bs" role="button"
                                         data-slide="prev">
@@ -254,16 +230,40 @@
                                 <p class="video-view-more">Navigate with left/right arrows.</p>
                             </div>
                         </div>
-                        <!--End of Project-->
+                    </div>
+                    <div id="featured-return" class="project">
+                        <a href="#projects" onclick="scrollToTargetOnLoad('')">Return to top.</a>
+                    </div>
+                    <h2 class="page-title">Side Projects</h2>
+                    <p class="section-intro">Technical projects showing low-level C++ with a focus on engine development, gameplay systems and graphics programming.</p>
+                    <div id='project-banner-section'>
+                        <div class="project-banner">
+                            <a href="#project-container" onclick="showProject('project-ray')">
+                                <img class="project-banner-img" width="100%" src="banners/raylib.jpg"
+                                    alt="Action RPG" />
+                                <div class="overlay">RPG Engine<br>(C++)</div>
+                            </a>
+                        </div>
+                        <div class="project-banner">
+                            <a href="#project-container" onclick="showProject('project-3d')">
+                                <img id="rend3d-banner-img" class="project-banner-img" width="100%"
+                                    src="banners/3drend.png" alt="3D Software Renderer" />
+                                <div class="overlay">3D Software Renderer<br>(C++)</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id='project-container'>
                         <div class="project" id="project-ray">
-                            <div class="project-title">'LeverQuest' - RPG Engine Demo (2024)</div>
+                            <div class="project-title">'LeverQuest' - Custom C++ RPG Engine (from scratch) (2024)</div>
                             <div class="project-link"><a href="https://github.com/stevegwh/raylib-arpg">See more on
                                     GitHub</a></div>
                             <div class="project-technologies">C++, raylib, entt</div>
                             <div class="project-type">Personal Project</div>
                             <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/leverquest.png" /></div>
+                                    src="banners/leverquest.png" alt="LeverQuest" /></div>
                             <div class="project-description">
+                                <p>Built a full gameplay framework without Unity or Unreal, including AI, UI, rendering,
+                                    and tooling.</p>
                                 <p>The objective of this project was to create a vertical slice of a Baldur's Gate
                                     3/Divinity: Original Sin 2-inspired CRPG without using a game engine, such as Unity
                                     or Unreal. Instead, I built the engine on top of the low-level 'raylib' library in
@@ -275,8 +275,8 @@
                                     that has occupied an underground dungeon. The player must repair a lever that opens
                                     their escape route through a series of quest chains to leave the dungeon area. Due
                                     to this, the demo was dubbed 'LeverQuest.'</p>
-                                <h3>Features</h3>
-                                <ul>
+                                <h3>Standout Systems</h3>
+                                <ul class="impact-list">
                                     <li>Dialogue and quest system with <a
                                             href="https://raw.githubusercontent.com/stevegwh/raylib-arpg/refs/heads/main/resources/dialog/arissa.txt">custom
                                             markup language</a> and parser for <a
@@ -291,21 +291,10 @@
                                     <li><a
                                             href="https://github.com/stevegwh/raylib-arpg/blob/main/engine/systems/NavigationGridSystem.cpp">Multi-unit
                                             A*/BFS Pathfinding system</a> with navigation resolution.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/engine/ParticleSystem.cpp">3D
-                                            billboarded particle system</a>.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/engine/raylib-cereal.hpp">JSON/Binary
-                                            serialisation</a>.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/resources/shaders/custom/include/lighting.fs">Lighting
-                                            system</a>.</li>
-                                    <li>Inventory/item system with equippable items.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/respacker/ResourcePacker.cpp">Blender-to-engine
-                                            asset pipeline</a>.</li>
                                 </ul>
-                                <h3>Video & Screenshots</h2>
+                                <p>Additional systems include billboarded particles, JSON/Binary serialisation, lighting,
+                                    equippable inventory items, and a Blender-to-engine asset pipeline.</p>
+                                <h3>Video & Screenshots</h3>
                             </div>
                             <div class="project-screenshot-wrapper">
                                 <div id="carousel-rpg" class="project-screenshots carousel slide" data-ride="carousel"
@@ -381,8 +370,10 @@
                             <div class="project-technologies">C++, SDL</div>
                             <div class="project-type">Personal Project</div>
                             <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/3drend.png" /></div>
+                                    src="banners/3drend.png" alt="3D Software Renderer" /></div>
                             <div class="project-description">
+                                <p>Implemented a full fixed-function rendering pipeline from scratch, including
+                                    rasterization, Z-buffering, shading, model loading, and texture filtering.</p>
                                 <p>A software renderer written from scratch using C++ and SDL. Creating a 3D software
                                     renderer has been a challenge I have wanted to tackle since I first started
                                     developing video games. But, it also presented an ideal opportunity to learn more
@@ -391,56 +382,25 @@
                                     and OBJ/MTL parser were written to support it. The project has three scenes
                                     showcasing shaded and textured environments with a GUI to select between scenes,
                                     shading method, and texture filtering.</p>
-                                <h3>Features</h2>
-                                    <ul>
-                                        <li><code>glm</code> was not used for this project. Instead, I created the
-                                            following:</li>
-                                        <li>
-                                            <ul>
-                                                <li><code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/slib.cpp">slib</a></code>
-                                                    - A helper library. Contains mutliple vector/matrix classes with
-                                                    operators overloaded for convenience.</li>
-                                            </ul>
+                                <h3>Low-level Graphics & Maths</h3>
+                                    <ul class="impact-list">
+                                        <li>Custom vector/matrix maths libraries:
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/slib.cpp">slib</a></code>
+                                            and
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/smath.cpp">smath</a></code>.
                                         </li>
-                                        <li>
-                                            <ul>
-                                                <li><code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/smath.cpp">smath</a></code>
-                                                    - A maths library. Can generate all necessary matricies for the
-                                                    renderer.</li>
-                                            </ul>
-                                        </li>
-                                        <li>Model/material loading.
+                                        <li>Model/material loading via
                                             <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/ObjParser.cpp">ObjParser</a></code>
-                                            parses and loads <code>obj</code> files and their accompanying
-                                            <code>mtl</code> files into the <code>renderable</code> class used by the
-                                            renderer.
-                                        </li>
-                                        <li>Full rendering pipeline.
+                                            for <code>obj</code> and <code>mtl</code> files.</li>
+                                        <li>Full rendering pipeline through
                                             <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Renderer.cpp">Renderer</a></code>
-                                            takes the 3D model data provided as a <code>Renderable</code> and puts it
-                                            through the pipeline to convert it to screen space coordinates.
-                                        </li>
-                                        <li>Z-Buffer implementation.</li>
-                                        <li>Triangle rasterization.
-                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Rasterizer.cpp">Rasterizer</a></code>
-                                            takes the data provided from the renderer and fills the triangle accordingly
-                                            with the edge-finding algorithm (not scanline).<ul>
-                                                <li>Texturing is implemented and is read from the <code>mtl</code> files
-                                                    provided. (Textures must be png files).</li>
-                                                <li>Two texture filtering algorithms - either nearest neighbour or
-                                                    bilinear filtering.</li>
-                                                <li>Two shading algorithms - either flat or gouraud shading.</li>
-                                                <li>Basic directional lighting.</li>
-                                                <li>Multiple textures are supported.</li>
-                                                <li>Texture atlases are supported. Can be used with bilinear filtering
-                                                    if atlas &#39;tiles&#39; are a consistent size.</li>
-                                            </ul>
-                                        </li>
-                                        <li>A GUI that displays the scene's framerate and allows the user to select from
-                                            various pre-selected scenes.</li>
-                                        <li>Multithreaded processing thanks to the <code>opm</code> library.</li>
+                                            and triangle rasterization through
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Rasterizer.cpp">Rasterizer</a></code>.</li>
                                     </ul>
-                                    <h3>Video & Screenshots</h2>
+                                    <p>Additional support includes flat/Gouraud shading, nearest-neighbour and bilinear
+                                        texture filtering, directional lighting, texture atlases, scene controls, and
+                                        multithreaded processing.</p>
+                                    <h3>Video & Screenshots</h3>
                             </div>
                             <div class="project-screenshot-wrapper">
                                 <div id="carousel-3d" class="project-screenshots carousel slide" data-ride="carousel"
@@ -460,17 +420,17 @@
                                                 allowfullscreen></iframe>
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="img/projects/3d/shading types.gif"><img
+                                            <a href="img/projects/3d/shading%20types.gif"><img
                                                     class="d-block w-100 project-screenshot"
-                                                    src="img/projects/3d/shading types.gif" alt="Second slide"></a>
+                                                    src="img/projects/3d/shading%20types.gif" alt="Second slide"></a>
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Flat vs Gouraud Shading</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="img/projects/3d/tex sampling types.gif"><img
+                                            <a href="img/projects/3d/tex%20sampling%20types.gif"><img
                                                     class="d-block w-100 project-screenshot"
-                                                    src="img/projects/3d/tex sampling types.gif" alt="Third slide"></a>
+                                                    src="img/projects/3d/tex%20sampling%20types.gif" alt="Third slide"></a>
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Nearest Neighbour vs Bilinear Filtering</p>
                                             </div>
@@ -491,7 +451,37 @@
                             </div>
                         </div>
                         <!--End of Project-->
-                        <!-- Start of Project -->
+                    </div>
+                    <div id="project-return" class="project">
+                        <a href="#projects" onclick="scrollToTargetOnLoad('')">Return to top.</a>
+                    </div>
+                    <!--End of Project Section-->
+                    <!-- Research Projects Section -->
+                    <h2 class="page-title">Research & Experimental Projects</h2>
+                    <p class="section-intro">Research-driven projects exploring VR training, simulation, and interaction design.</p>
+                    <div id='academic-banner-section'>
+                        <div class="project-banner">
+                            <a href="#academic-container" onclick="showProject('project-vrle')">
+                                <img class="project-banner-img" width="100%" src="banners/vr-wildfire.jpg"
+                                    alt="VR Wildfire" />
+                                <div class="overlay">VR Firefighter Training<br>(Unity)</div>
+                            </a>
+                        </div>
+                        <div class="project-banner">
+                            <a href="#academic-container" onclick="showProject('project-security')">
+                                <img class="project-banner-img" width="100%" src="banners/vr-security.png"
+                                    alt="VR Security" />
+                                <div class="overlay">VR Security Training<br>(Unity)</div>
+                            </a>
+                        </div>
+                        <div class="project-banner">
+                            <a href="#academic-container" onclick="showProject('project-powr')">
+                                <img class="project-banner-img" width="100%" src="banners/powr.png" alt="POWR" />
+                                <div class="overlay">POWR<br>(Unity)</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id='academic-container'>
                         <div class="project" id="project-vrle">
                             <div class="project-title">VR Wildfire Learning Environment (2023)</div>
                             <div class="project-link"><a href="https://github.com/stevegwh/vr-wildfire-sim">See more on
@@ -499,7 +489,7 @@
                             <div class="project-technologies">Unity, VR</div>
                             <div class="project-type">Research Project</div>
                             <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/vrle-banner.png" /></div>
+                                    src="banners/vrle-banner.png" alt="VR Wildfire Learning Environment" /></div>
                             <div class="project-description">
                                 <p>As part of my PhD, working with industry experts and stakeholders, I designed and
                                     developed a custom virtual reality learning environment over a year and a half. I
@@ -517,7 +507,7 @@
                                     <li>Randomised quizzes to encourage reflection and reinforcement.</li>
                                     <li>In-depth tutorial that covers the environment&#39;s controls and tasks. </li>
                                 </ul>
-                                <h3>Video & Screenshots</h2>
+                                <h3>Video & Screenshots</h3>
                             </div>
                             <div class="project-screenshot-wrapper">
                                 <div id="carousel-vrle" class="project-screenshots carousel slide" data-ride="carousel"
@@ -585,7 +575,7 @@
                             <div class="project-technologies">Unity, VR</div>
                             <div class="project-type">Professional Project</div>
                             <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/vr-security-banner.png" /></div>
+                                    src="banners/vr-security-banner.png" alt="VR Security Training" /></div>
                             <div class="project-description">
                                 <p>This project was created as part of a research project with the University of Kent.
                                     The purpose of the VR environment is to teach new security guards the basics of a
@@ -597,7 +587,7 @@
                                 <p>Due to nature of the research project, the source code is not available for this
                                     project.</p>
 
-                                <h3>Features</h2>
+                                <h3>Features</h3>
                                     <ul>
                                         <li>Individual persistent user profiles and statistics.</li>
                                         <li>Multiple individual randomised hazards.</li>
@@ -611,7 +601,7 @@
                                         <li>Inventory system in which users can add and remove virtual objects from the
                                             world around them.</li>
                                     </ul>
-                                    <h3>Video & Screenshots</h2>
+                                    <h3>Video & Screenshots</h3>
                             </div>
                             <div class="project-screenshot-wrapper">
                                 <div id="carousel-vr-security" class="project-screenshots carousel slide"
@@ -688,7 +678,7 @@
                             <div class="project-technologies">Unity, VR</div>
                             <div class="project-type">Research Project</div>
                             <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/powr-banner.png" /></div>
+                                    src="banners/powr-banner.png" alt="Prop-oriented World Rotation" /></div>
                             <div class="project-description">
                                 <p>Prop-oriented World Rotation (POWR) is an experimental technique to enable games to
                                     map objects from the user's physical environment to objects in the virtual world.
@@ -703,13 +693,13 @@
                                 </p>
                                 <p>This project won the award for best poster/demo at the "VRST 2021" conference as
                                     voted for by conference participants.</p>
-                                <h3>Features</h2>
+                                <h3>Features</h3>
                                     <ul>
                                         <li>Implementation of "POWR" in a demonstration game.</li>
                                         <li>A variety of enemies and obstacles with their own logic.</li>
                                         <li>Wave-based shooting mechanics.</li>
                                     </ul>
-                                    <h3>Video & Screenshots</h2>
+                                    <h3>Video & Screenshots</h3>
                             </div>
                             <div class="project-screenshot-wrapper">
                                 <div id="carousel-powr" class="project-screenshots carousel slide" data-ride="carousel"
@@ -760,83 +750,100 @@
                             </div>
                         </div>
                         <!--End of Project-->
-                        <!-- Start of Project -->
-                        <div class="project" id="gamejam-doki">
-                            <div class="project-title">Doki Doki Mouse (2022)</div>
-                            <div class="project-link"><a href="https://stevegwh.itch.io/doki-doki-mouse">Play the game
-                                    here!</a></div>
-                            <div class="project-link"><a href="https://github.com/stevegwh/Doki-Doki-Mouse">See more on
-                                    GitHub</a></div>
-                            <div class="project-technologies">Unity</div>
-                            <div class="project-type">Game Jam Entry</div>
-                            <!--                        <div class="project-title-img-wrapper"><img class="project-title-img" src="banners/doki-banner.png"/></div>-->
-                            <div class="project-description">
-                                <p>A game jam entry submitted to "8 Bits to Infinity #36 - Mouse Jam 2," with the theme
-                                    of creating a game that was only controlled by the mouse. I chose to recreate my
-                                    days of playing old flash games by creating a mouse-controlled "maze" game with a
-                                    variety of different enemies with different behaviours. Feedback was positive from
-                                    the community and a was the entry played by a Japanese streamer which is available
-                                    to watch below.</p>
-                                <h3>Video & Screenshots</h2>
+                    </div>
+                    <div id="academic-return" class="project">
+                        <a href="#projects" onclick="scrollToTargetOnLoad('')">Return to top.</a>
+                    </div>
+                    <!--End of Research Section-->
+                    <h2 class="page-title">Other Projects & Game Jams</h2>
+                    <p class="section-intro">Smaller supporting projects and jam work.</p>
+                    <div class="supporting-projects">
+                        <div class="supporting-project-inner">
+                            <div class="project-banner supporting-project-banner">
+                                <a href="#other-container" onclick="showProject('gamejam-doki')">
+                                    <img class="project-banner-img" width="100%" src="banners/doki.png"
+                                        alt="DOKI DOKI Mouse" />
+                                    <div class="overlay">Doki Doki Mouse<br>(Unity)</div>
+                                </a>
                             </div>
-                            <div class="project-screenshot-wrapper">
-                                <div id="carousel-doki" class="project-screenshots carousel slide" data-ride="carousel"
-                                    data-interval="false">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carousel-doki" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carousel-doki" data-slide-to="1"></li>
-                                        <li data-target="#carousel-doki" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <iframe class="d-block w-100 project-screenshot"
-                                                src="https://www.youtube.com/embed/kwK9KCvTamY?si=hoUHYh3nJjWEB7Sr"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerpolicy="strict-origin-when-cross-origin"
-                                                allowfullscreen></iframe>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <a href="img/projects/doki/1.png"><img
-                                                    class="d-block w-100 project-screenshot"
-                                                    src="img/projects/doki/1.png" alt="Second slide"></a>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <a href="img/projects/doki/2.png"><img
-                                                    class="d-block w-100 project-screenshot"
-                                                    src="img/projects/doki/2.png" alt="Third slide"></a>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <a href="img/projects/doki/3.png"><img
-                                                    class="d-block w-100 project-screenshot"
-                                                    src="img/projects/doki/3.png" alt="Forth slide"></a>
-                                        </div>
+                            <div id="other-container">
+                                <div class="project" id="gamejam-doki">
+                                    <div class="project-title">Doki Doki Mouse (2022)</div>
+                                    <div class="project-link"><a href="https://stevegwh.itch.io/doki-doki-mouse">Play the game
+                                            here!</a></div>
+                                    <div class="project-link"><a href="https://github.com/stevegwh/Doki-Doki-Mouse">See more on
+                                            GitHub</a></div>
+                                    <div class="project-technologies">Unity</div>
+                                    <div class="project-type">Game Jam Entry</div>
+                                    <div class="project-description">
+                                        <p>A game jam entry submitted to "8 Bits to Infinity #36 - Mouse Jam 2," with the theme
+                                            of creating a game that was only controlled by the mouse. I chose to recreate my
+                                            days of playing old flash games by creating a mouse-controlled maze game with a
+                                            variety of different enemies with different behaviours. Feedback was positive from
+                                            the community and the entry was played by a Japanese streamer, which is available
+                                            to watch below.</p>
+                                        <h3>Video & Screenshots</h3>
                                     </div>
-                                    <a class="carousel-control-prev" href="#carousel-doki" role="button"
-                                        data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carousel-doki" role="button"
-                                        data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                                    <div class="project-screenshot-wrapper">
+                                        <div id="carousel-doki" class="project-screenshots carousel slide" data-ride="carousel"
+                                            data-interval="false">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carousel-doki" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carousel-doki" data-slide-to="1"></li>
+                                                <li data-target="#carousel-doki" data-slide-to="2"></li>
+                                            </ol>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <iframe class="d-block w-100 project-screenshot"
+                                                        src="https://www.youtube.com/embed/kwK9KCvTamY?si=hoUHYh3nJjWEB7Sr"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        referrerpolicy="strict-origin-when-cross-origin"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <a href="img/projects/doki/1.png"><img
+                                                            class="d-block w-100 project-screenshot"
+                                                            src="img/projects/doki/1.png" alt="Second slide"></a>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <a href="img/projects/doki/2.png"><img
+                                                            class="d-block w-100 project-screenshot"
+                                                            src="img/projects/doki/2.png" alt="Third slide"></a>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <a href="img/projects/doki/3.png"><img
+                                                            class="d-block w-100 project-screenshot"
+                                                            src="img/projects/doki/3.png" alt="Forth slide"></a>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carousel-doki" role="button"
+                                                data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carousel-doki" role="button"
+                                                data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                        <p class="video-view-more">Navigate with left/right arrows.</p>
+                                    </div>
                                 </div>
-                                <p class="video-view-more">Navigate with left/right arrows.</p>
                             </div>
                         </div>
+                        <div id="other-return" class="project">
+                            <a href="#projects" onclick="scrollToTargetOnLoad('')">Return to top.</a>
+                        </div>
                     </div>
-                    <div id="project-return" class="project">
-                        <a href="#projects" onclick="scrollToTargetOnLoad('')">Return to project selection.</a>
-                    </div>
-                    <!--End of Project Section-->
                 </div>
                 <div id="page-footer">
                     Copyright ©️ 2025 Steve Wheeler. All Rights Reserved.
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

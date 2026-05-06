@@ -6,6 +6,7 @@ function showProject(elementId) {
     var projectList = document.getElementsByClassName('project');
     var alreadyActive = false;
     var targetElement = document.getElementById(elementId);
+
     if (!targetElement) {
         return;
     }
@@ -26,6 +27,7 @@ function showProject(elementId) {
     var featuredContainer = document.getElementById("featured-project-container");
     var academicContainer = document.getElementById("academic-container");
     var otherContainer = document.getElementById("other-container");
+
     if (featuredContainer && featuredContainer.contains(targetElement)) {
         returnElement = featuredReturnElement;
     }
@@ -35,36 +37,40 @@ function showProject(elementId) {
     else if (otherContainer && otherContainer.contains(targetElement)) {
         returnElement = otherReturnElement;
     }
-    
+
     for (var i = 0; i < projectList.length; i++) {
-        if (projectList[i] == targetElement)
-        {
-            if (projectList[i].style.display == 'block')
-            {
+
+        if (projectList[i] == targetElement) {
+            if (projectList[i].style.display == 'block') {
                 alreadyActive = true;
             }
         }
+
         projectList[i].style.display = 'none';
     }
-    
-    if (!alreadyActive)
-    {
+
+    if (!alreadyActive) {
         targetElement.style.display = 'block';
+
+        // Lazy-load YouTube iframes AFTER becoming visible
+        var iframes = targetElement.querySelectorAll('iframe[data-src]');
+
+        for (var j = 0; j < iframes.length; j++) {
+            if (!iframes[j].src) {
+                iframes[j].src = iframes[j].dataset.src;
+            }
+        }
     }
-    else
-    {  
+    else {
         if (returnElement) {
             returnElement.style.display = 'none';
         }
         return;
     }
-    
-    if (projectList.length > 0 && returnElement)
-    {
+
+    if (projectList.length > 0 && returnElement) {
         returnElement.style.display = 'block';
     }
-
-
 }
   
   window.addEventListener('DOMContentLoaded', function() {

@@ -424,8 +424,12 @@ body {
     display: block;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid #c9a64a;
     border-radius: 4px;
     background-color: #050505;
+    box-shadow: 0 0 0 1px rgba(255, 232, 151, 0.18);
+    cursor: zoom-in;
 }
 
 .gallery-item img {
@@ -441,15 +445,70 @@ body {
 }
 
 .gallery-caption {
+    display: none;
+}
+
+.image-focus-window {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+.image-focus-window.is-open {
+    display: flex;
+}
+
+.image-focus-panel {
+    position: relative;
+    width: min(92vw, 860px);
+    max-height: 88vh;
+    padding: 2.5em 0.8em 0.8em;
+    background-color: #0f0f0f;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+    box-shadow: 0 12px 38px rgba(0, 0, 0, 0.55);
+}
+
+.image-focus-close {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0.5em 0.7em;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    top: 0.55em;
+    right: 0.65em;
+    width: 2em;
+    height: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 4px;
+    background-color: #000;
     color: #ededed;
-    font-size: 0.85em;
-    pointer-events: none;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-focus-close:hover,
+.image-focus-close:focus {
+    background-color: #1b77b3;
+    color: #fff;
+    outline: none;
+}
+
+.image-focus-img {
+    display: block;
+    width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    background-color: #050505;
+}
+
+.image-focus-caption {
+    margin-top: 0.65em;
+    color: #ccc;
+    font-size: 0.9em;
+    text-align: center;
 }
 
 .carousel-control-prev:focus,

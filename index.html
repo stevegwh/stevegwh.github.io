@@ -198,6 +198,13 @@
                     <p class="section-intro">Technical projects showing low-level C++ with a focus on engine development, gameplay systems and graphics programming.</p>
                     <div id='project-banner-section'>
                         <div class="project-banner">
+                            <a href="#project-container" onclick="showProject('project-sage')">
+                                <img class="project-banner-img" width="100%" src="img/projects/sage/01.png"
+                                    alt="SAGE editor entity inspector" />
+                                <div class="overlay">SAGE<br>(C++)</div>
+                            </a>
+                        </div>
+                        <div class="project-banner">
                             <a href="#project-container" onclick="showProject('project-ray')">
                                 <img class="project-banner-img" width="100%" src="banners/raylib.jpg"
                                     alt="Action RPG" />
@@ -213,6 +220,85 @@
                         </div>
                     </div>
                     <div id='project-container'>
+                        <div class="project" id="project-sage">
+                            <div class="project-title">SAGE - C++ Engine &amp; Editor for Top-Down Point-and-Click Games (2026)</div>
+                            <div class="project-link"><a href="https://github.com/stevegwh/sage">See more on
+                                    GitHub</a></div>
+                            <div class="project-technologies">C++20, raylib, EnTT, Lua, sol2, cereal, ImGui</div>
+                            <div class="project-type">Personal Project</div>
+                            <div class="project-title-img-wrapper"><img class="project-title-img"
+                                    src="img/projects/sage/01.png" alt="SAGE editor entity inspector" /></div>
+                            <div class="project-description">
+                                <p>SAGE (Steve's Awesome Game Engine) is a reusable C++20 runtime and editor layer I
+                                    have made specifically for top-down point-and-click games, including RTS games,
+                                    management sims, and RPGs.</p>
+                                <p>It started out as the engine behind my previous RPG engine example, but has since
+                                    been expanded significantly into a broader game framework with reusable runtime
+                                    systems, editor tooling, scripting, serialization, and an asset pipeline.</p>
+                                <h3>Standout Systems</h3>
+                                <ul class="impact-list">
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/editor/EditorScene.cpp">Integrated
+                                            editor</a> for building maps, placing entities, editing components, and
+                                        testing changes in play mode.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/TerrainMesh.cpp">Terrain
+                                            tools</a> for sculpting heightfields, authoring navigation surfaces, and
+                                        aligning gameplay objects to the world.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/NavigationGridSystem.cpp">Navigation</a>
+                                        and movement systems designed for point-and-click controls, including multi-tile
+                                        footprints, obstacle avoidance, and smooth actor turning.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/CollisionSystem.cpp">Collision
+                                            and trigger system</a> with raycasts, box/mesh queries, collision layers,
+                                        and an editable collision matrix.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/RenderSystem.cpp">Rendering
+                                            stack</a> for dynamic models, skinned animation, emissive materials, skyboxes,
+                                        custom shaders, and particles.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/ScriptSystem.cpp">Lua
+                                            scripting</a> for entity behaviours, gameplay events, and <a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/ScriptSystem.hpp">project-specific
+                                            game APIs</a>.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/ui">Custom UI
+                                            framework</a> for in-game windows, tables, tooltips, drag-and-drop, and
+                                        themed HUD overlays.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/editor/EditorHistory.cpp">Editor
+                                            undo/redo history</a>, including hierarchy edits, component changes,
+                                        transforms, terrain sculpting, and multi-selection edits.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/ResourceManager.cpp">Packed
+                                            asset</a> and <a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/Serializer.cpp">serialization
+                                            pipeline</a> for loading game resources, saving editor maps, and reusing
+                                        groups of entities as flatpacks.</li>
+                                </ul>
+                                <h3>Video</h3>
+                            </div>
+                            <div class="project-screenshot-wrapper">
+                                <div class="project-gallery">
+                                    <div class="gallery-video">
+                                        <iframe data-src="https://www.youtube.com/embed/yNF9LtaBrrs"
+                                            title="SAGE demonstration video" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <a class="gallery-item" href="img/projects/sage/02.png"><img
+                                            src="img/projects/sage/02.png" alt="SAGE editor terrain tools">
+                                        <div class="gallery-caption">Terrain sculpting and editor panels</div></a>
+                                    <a class="gallery-item" href="img/projects/sage/01.png"><img
+                                            src="img/projects/sage/01.png" alt="SAGE editor entity inspector">
+                                        <div class="gallery-caption">Entity hierarchy, inspector, and asset browser</div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Project-->
+                        <!-- Start of Project -->
                         <div class="project" id="project-ray">
                             <div class="project-title">'LeverQuest' - Custom C++ RPG Engine (from scratch) (2024)</div>
                             <div class="project-link"><a href="https://github.com/stevegwh/raylib-arpg">See more on

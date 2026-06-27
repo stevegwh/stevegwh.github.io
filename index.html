@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <title>Steve Wheeler - Game Developer</title>
+    <title>Steve Wheeler - Game Designer & Gameplay Programmer</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col">
                     <h1>Steve Wheeler</h1>
-                    <h4>Game Developer</h4>
+                    <h4>Game Designer & Gameplay Programmer</h4>
                 </div>
             </div>
             <div>
@@ -73,9 +73,11 @@
                             Hi, I'm Steve - a game developer currently producing quests
                             and other content for the MMORPG <a
                                 href="https://store.steampowered.com/app/2791440/Brighter_Shores/">Brighter Shores</a>,
-                            working at <a href="https://fenresearch.com/">Fen Research</a>. You can find more of my work on
-                            my <a href="https://github.com/stevegwh">GitHub</a> or learn more about me and my background
-                            <a href="about.html">here.</a>
+                            working at <a href="https://fenresearch.com/">Fen Research</a>. I've been working on games
+                            professionally since 2020, starting out in the world of Serious Games with a focus on
+                            interaction design and player experience. Alongside my professional work, I build C++
+                            engines, editors and gameplay systems to explore game design from the technical side. You can learn more
+                            about me and my background <a href="about.html">here.</a>
                             </p>
                             <p class="intro-text">
                             I'd love to network with fellow game enthusiasts and
@@ -85,7 +87,7 @@
                     </div>
                 </div>
                 <div id="projects">
-                    <h2 id="featured-work" class="page-title">Featured Work</h2>
+                    <h2 id="featured-work" class="page-title">Current Work</h2>
                     <div class="featured-project">
                         <a class="featured-project-img-wrapper" href="#featured-project-container"
                             onclick="showProject('project-brightershores')">
@@ -129,8 +131,8 @@
                                 <ul>
                                     <li><strong><a href="https://brightershoreswiki.org/w/Runaway_Rabbits_(Easter_2026)">Easter 2026 Event</a>:</strong> Lead Developer. A seasonal scavenger hunt quest about tracking down runaway rabbits.
                                         <ul>
-                                            <li>Responsible for the quest's story, theme and objectives.</li>
-                                            <li>Responsible for the mapping of the 'Rabbit Cafe' and the dialogue of its patrons.</li>
+                                            <li>Designed the quest's story, theme and objectives.</li>
+                                            <li>Mapped the Rabbit Cafe and wrote dialogue for its patrons.</li>
                                             <li>Design and implementation of the core gameplay mechanic: the rabbit herding and capture system.</li>
                                         </ul>
                                     </li>
@@ -144,7 +146,7 @@
                                     <li><strong><a href="https://brightershoreswiki.org/w/Filtration_Station">Filtration Station</a>:</strong> Lead Developer. Brighter Shores' first repeatable minigame with varying rules and difficulty.
                                         <ul>
                                             <li>Owned the design and implementation of the minigame from concept to release.</li>
-                                            <li>Created the game's core mechanics and systems and interated upon them, resulting in eight unique game modes across four different difficulties.</li>
+                                            <li>Created the game's core mechanics and systems and iterated upon them, resulting in eight unique game modes across four different difficulties.</li>
                                             <li>Created and implemented a 'puzzle solver' using a BFS pathfinding implementation to procedurally generate random puzzles.</li>
                                         </ul>
                                     </li>
@@ -194,247 +196,9 @@
                     <div id="featured-return" class="project">
                         <a href="#featured-work">Return to top.</a>
                     </div>
-                    <h2 id="side-projects" class="page-title">Side Projects</h2>
-                    <p class="section-intro">Technical projects showing low-level C++ with a focus on engine development, gameplay systems and graphics programming.</p>
-                    <div id='project-banner-section'>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-sage')">
-                                <img class="project-banner-img" width="100%" src="img/projects/sage/01.png"
-                                    alt="SAGE editor entity inspector" />
-                                <div class="overlay">SAGE<br>(C++)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-ray')">
-                                <img class="project-banner-img" width="100%" src="banners/raylib.jpg"
-                                    alt="Action RPG" />
-                                <div class="overlay">RPG Engine<br>(C++)</div>
-                            </a>
-                        </div>
-                        <div class="project-banner">
-                            <a href="#project-container" onclick="showProject('project-3d')">
-                                <img id="rend3d-banner-img" class="project-banner-img" width="100%"
-                                    src="banners/3drend.png" alt="3D Software Renderer" />
-                                <div class="overlay">3D Software Renderer<br>(C++)</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div id='project-container'>
-                        <div class="project" id="project-sage">
-                            <div class="project-title">SAGE - C++ Engine &amp; Editor for Top-Down Point-and-Click Games (2026)</div>
-                            <div class="project-link"><a href="https://github.com/stevegwh/sage">See more on
-                                    GitHub</a></div>
-                            <div class="project-technologies">C++20, raylib, EnTT, Lua, sol2, cereal, ImGui</div>
-                            <div class="project-type">Personal Project</div>
-                            <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="img/projects/sage/01.png" alt="SAGE editor entity inspector" /></div>
-                            <div class="project-description">
-                                <p>SAGE (Steve's Awesome Game Engine) is a reusable C++20 runtime and editor layer I
-                                    have made specifically for top-down point-and-click games, including RTS games,
-                                    management sims, and RPGs.</p>
-                                <p>It started out as the engine behind my previous RPG engine example, but has since
-                                    been expanded significantly into a broader game framework with reusable runtime
-                                    systems, editor tooling, scripting, serialization, and an asset pipeline.</p>
-                                <h3>Standout Systems</h3>
-                                <ul class="impact-list">
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/editor/EditorScene.cpp">Integrated
-                                            editor</a> for building maps, placing entities, editing components, and
-                                        testing changes in play mode.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/TerrainMesh.cpp">Terrain
-                                            tools</a> for sculpting heightfields, authoring navigation surfaces, and
-                                        aligning gameplay objects to the world.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/NavigationGridSystem.cpp">Navigation</a>
-                                        and movement systems designed for point-and-click controls, including multi-tile
-                                        footprints, obstacle avoidance, and smooth actor turning.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/CollisionSystem.cpp">Collision
-                                            and trigger system</a> with raycasts, box/mesh queries, collision layers,
-                                        and an editable collision matrix.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/RenderSystem.cpp">Rendering
-                                            stack</a> for dynamic models, skinned animation, emissive materials, skyboxes,
-                                        custom shaders, and particles.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/ScriptSystem.cpp">Lua
-                                            scripting</a> for entity behaviours, gameplay events, and <a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/ScriptSystem.hpp">project-specific
-                                            game APIs</a>.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/ui">Custom UI
-                                            framework</a> for in-game windows, tables, tooltips, drag-and-drop, and
-                                        themed HUD overlays.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/editor/EditorHistory.cpp">Editor
-                                            undo/redo history</a>, including hierarchy edits, component changes,
-                                        transforms, terrain sculpting, and multi-selection edits.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/ResourceManager.cpp">Packed
-                                            asset</a> and <a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/Serializer.cpp">serialization
-                                            pipeline</a> for loading game resources, saving editor maps, and reusing
-                                        groups of entities as flatpacks.</li>
-                                </ul>
-                                <h3>Video</h3>
-                            </div>
-                            <div class="project-screenshot-wrapper">
-                                <div class="project-gallery">
-                                    <div class="gallery-video">
-                                        <iframe data-src="https://www.youtube.com/embed/yNF9LtaBrrs"
-                                            title="SAGE demonstration video" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                    <a class="gallery-item" href="img/projects/sage/02.png"><img
-                                            src="img/projects/sage/02.png" alt="SAGE editor terrain tools">
-                                        <div class="gallery-caption">Terrain sculpting and editor panels</div></a>
-                                    <a class="gallery-item" href="img/projects/sage/01.png"><img
-                                            src="img/projects/sage/01.png" alt="SAGE editor entity inspector">
-                                        <div class="gallery-caption">Entity hierarchy, inspector, and asset browser</div></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of Project-->
-                        <!-- Start of Project -->
-                        <div class="project" id="project-ray">
-                            <div class="project-title">'LeverQuest' - Custom C++ RPG Engine (from scratch) (2024)</div>
-                            <div class="project-link"><a href="https://github.com/stevegwh/raylib-arpg">See more on
-                                    GitHub</a></div>
-                            <div class="project-technologies">C++, raylib, entt</div>
-                            <div class="project-type">Personal Project</div>
-                            <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/leverquest.png" alt="LeverQuest" /></div>
-                            <div class="project-description">
-                                <p>Built a full gameplay framework without Unity or Unreal, including AI, UI, rendering,
-                                    and tooling.</p>
-                                <p>The objective of this project was to create a vertical slice of a Baldur's Gate
-                                    3/Divinity: Original Sin 2-inspired CRPG without using a game engine, such as Unity
-                                    or Unreal. Instead, I built the engine on top of the low-level 'raylib' library in
-                                    C++, primarily using raylib for window management and rendering. The goal was to
-                                    learn how to build systems and tools from scratch, which I take for granted when
-                                    using large-scale game engines, such as pathfinding, particle systems, visual
-                                    effects, or serialisation.</p>
-                                <p>In this demo, the player awakens in a cave and must navigate through a goblin cult
-                                    that has occupied an underground dungeon. The player must repair a lever that opens
-                                    their escape route through a series of quest chains to leave the dungeon area. Due
-                                    to this, the demo was dubbed 'LeverQuest.'</p>
-                                <h3>Standout Systems</h3>
-                                <ul class="impact-list">
-                                    <li>Dialogue and quest system with <a
-                                            href="https://raw.githubusercontent.com/stevegwh/raylib-arpg/refs/heads/main/resources/dialog/arissa.txt">custom
-                                            markup language</a> and parser for <a
-                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/game/src/QuestManager.cpp">quest
-                                            logic</a> and <a
-                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/game/utils/ParsingHelpers.cpp">conditionals</a>.
-                                    </li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/ui">Custom
-                                            UI Library</a> imitating HTML table layout logic, including the ability to
-                                        drag and drop icons contextually.</li>
-                                    <li><a
-                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/NavigationGridSystem.cpp">Multi-unit
-                                            A*/BFS Pathfinding system</a> with navigation resolution.</li>
-                                </ul>
-                                <p>Additional systems include billboarded particles, JSON/Binary serialisation, lighting,
-                                    equippable inventory items, and a Blender-to-engine asset pipeline.</p>
-                                <h3>Video & Screenshots</h3>
-                            </div>
-                            <div class="project-screenshot-wrapper">
-                                <div class="project-gallery">
-                                    <div class="gallery-video">
-                                        <iframe data-src="https://www.youtube.com/embed/brtIjecU7UA?si=jje6rUembJxDemuq"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                    <a class="gallery-item" href="img/projects/rpg/4.png"><img
-                                            src="img/projects/rpg/4.png" alt="LeverQuest screenshot"></a>
-                                    <a class="gallery-item" href="img/projects/rpg/2.png"><img
-                                            src="img/projects/rpg/2.png" alt="LeverQuest screenshot"></a>
-                                    <a class="gallery-item" href="img/projects/rpg/5.png"><img
-                                            src="img/projects/rpg/5.png" alt="LeverQuest screenshot"></a>
-                                    <a class="gallery-item" href="img/projects/rpg/3.png"><img
-                                            src="img/projects/rpg/3.png" alt="LeverQuest screenshot"></a>
-                                    <a class="gallery-item" href="img/projects/rpg/1.png"><img
-                                            src="img/projects/rpg/1.png" alt="LeverQuest screenshot"></a>
-                                    <a class="gallery-item" href="img/projects/rpg/6.png"><img
-                                            src="img/projects/rpg/6.png" alt="LeverQuest screenshot"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of Project-->
-                        <!-- Start of Project -->
-                        <div class="project" id="project-3d">
-                            <div class="project-title">3D Software Renderer (2024)</div>
-                            <div class="project-link"><a href="https://github.com/stevegwh/3DSoftwareRenderer">See more
-                                    on GitHub</a></div>
-                            <div class="project-technologies">C++, SDL</div>
-                            <div class="project-type">Personal Project</div>
-                            <div class="project-title-img-wrapper"><img class="project-title-img"
-                                    src="banners/3drend.png" alt="3D Software Renderer" /></div>
-                            <div class="project-description">
-                                <p>Implemented a full fixed-function rendering pipeline from scratch, including
-                                    rasterization, Z-buffering, shading, model loading, and texture filtering.</p>
-                                <p>A software renderer written from scratch using C++ and SDL. Creating a 3D software
-                                    renderer has been a challenge I have wanted to tackle since I first started
-                                    developing video games. But, it also presented an ideal opportunity to learn more
-                                    about the fundamentals of 3D renderering while improving my 3D maths and C++ skills.
-                                    A complete "fixed-function" rendering pipeline was implemented, and a maths library
-                                    and OBJ/MTL parser were written to support it. The project has three scenes
-                                    showcasing shaded and textured environments with a GUI to select between scenes,
-                                    shading method, and texture filtering.</p>
-                                <h3>Low-level Graphics & Maths</h3>
-                                    <ul class="impact-list">
-                                        <li>Custom vector/matrix maths libraries:
-                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/slib.cpp">slib</a></code>
-                                            and
-                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/smath.cpp">smath</a></code>.
-                                        </li>
-                                        <li>Model/material loading via
-                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/ObjParser.cpp">ObjParser</a></code>
-                                            for <code>obj</code> and <code>mtl</code> files.</li>
-                                        <li>Full rendering pipeline through
-                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Renderer.cpp">Renderer</a></code>
-                                            and triangle rasterization through
-                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Rasterizer.cpp">Rasterizer</a></code>.</li>
-                                    </ul>
-                                    <p>Additional support includes flat/Gouraud shading, nearest-neighbour and bilinear
-                                        texture filtering, directional lighting, texture atlases, scene controls, and
-                                        multithreaded processing.</p>
-                                    <h3>Video & Screenshots</h3>
-                            </div>
-                            <div class="project-screenshot-wrapper">
-                                <div class="project-gallery">
-                                    <div class="gallery-video">
-                                        <iframe data-src="https://www.youtube.com/embed/pFWjd4k_5mI?si=P4aPFlkJYW5w0sgB"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                    <a class="gallery-item" href="img/projects/3d/shading%20types.gif"><img
-                                            src="img/projects/3d/shading%20types.gif" alt="Flat vs Gouraud shading">
-                                        <div class="gallery-caption">Flat vs Gouraud Shading</div></a>
-                                    <a class="gallery-item" href="img/projects/3d/tex%20sampling%20types.gif"><img
-                                            src="img/projects/3d/tex%20sampling%20types.gif"
-                                            alt="Nearest neighbour vs bilinear filtering">
-                                        <div class="gallery-caption">Nearest Neighbour vs Bilinear Filtering</div></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of Project-->
-                    </div>
-                    <div id="project-return" class="project">
-                        <a href="#side-projects">Return to top.</a>
-                    </div>
-                    <!--End of Project Section-->
                     <!-- Research Projects Section -->
-                    <h2 id="research-projects" class="page-title">Research & Experimental Projects</h2>
-                    <p class="section-intro">Research-driven projects exploring VR training, simulation, and interaction design.</p>
+                    <h2 id="research-projects" class="page-title">Previous Professional & Research Projects</h2>
+                    <p class="section-intro">Design-led VR projects built around real users, real constraints and applied training problems, including paid professional work for industry partners and clients. Each ran as a methodical, end-to-end process: gathering requirements with stakeholders, designing the experience and the systems behind it, building it, then testing it with real users, including professional firefighters.</p>
                     <div id='academic-banner-section'>
                         <div class="project-banner">
                             <a href="#academic-container" onclick="showProject('project-vrle')">
@@ -467,14 +231,16 @@
                             <div class="project-title-img-wrapper"><img class="project-title-img"
                                     src="banners/vrle-banner.png" alt="VR Wildfire Learning Environment" /></div>
                             <div class="project-description">
-                                <p>As part of my PhD, working with industry experts and stakeholders, I designed and
-                                    developed a custom virtual reality learning environment over a year and a half. I
-                                    used this environment in two user studies, with over 50 participants, including
-                                    professional firefighters.</p>
+                                <p>As part of my PhD at the Human Interface Technology Lab (HIT Lab NZ), I designed and
+                                    built a custom VR learning environment for training firefighters, over the course of
+                                    a year and a half and working throughout with industry experts and stakeholders. The
+                                    design was driven by a framework I developed to align a learner's preferences and
+                                    VR's strengths with the training tasks and the environment itself.</p>
+                                <p>I then evaluated it across two user studies with 55 participants, 15 of them
+                                    professional firefighters, including one I organised and ran at a fire station in
+                                    Canterbury, New Zealand.</p>
                                 <h3 id="features">Features</h3>
                                 <ul>
-                                    <li>In-depth design developed using a framework to synergise learner&#39;s
-                                        preferences and VR&#39;s features with task and environment design.</li>
                                     <li>Fire propagation based on wind speed, wind direction, moisture level of fuel,
                                         and slope inclination.</li>
                                     <li>Scripted live demonstrations of fire behaviour.</li>
@@ -517,15 +283,16 @@
                             <div class="project-title-img-wrapper"><img class="project-title-img"
                                     src="banners/vr-security-banner.png" alt="VR Security Training" /></div>
                             <div class="project-description">
-                                <p>This project was created as part of a research project with the University of Kent.
-                                    The purpose of the VR environment is to teach new security guards the basics of a
-                                    typical patrol. The environment was designed to test the user's situational
-                                    awareness and understanding of correct procedure.</p>
+                                <p>Professional work, delivered with the University of Kent for a security company based
+                                    in London. The brief was to train new security guards in the basics of a patrol, so I
+                                    designed the scenarios around testing a trainee's situational awareness and their
+                                    grasp of correct procedure.</p>
 
-                                <p>The training environment was created using Unity and the SteamVR SDK.</p>
+                                <p>As the sole developer, working alongside a 3D artist, I designed and built the full
+                                    application, and met regularly with the client and project supervisors to gather and
+                                    refine requirements and shape features. Built in Unity with the SteamVR SDK.</p>
 
-                                <p>Due to nature of the research project, the source code is not available for this
-                                    project.</p>
+                                <p>Due to the nature of the research project, the source code is not available.</p>
 
                                 <h3>Features</h3>
                                     <ul>
@@ -578,19 +345,21 @@
                             <div class="project-title-img-wrapper"><img class="project-title-img"
                                     src="banners/powr-banner.png" alt="Prop-oriented World Rotation" /></div>
                             <div class="project-description">
-                                <p>Prop-oriented World Rotation (POWR) is an experimental technique to enable games to
-                                    map objects from the user's physical environment to objects in the virtual world.
-                                    For example, the user's bed in their room reinforces a crate in the virtual world.
-                                    This allows the users to benefit from haptic feedback from the virtual world without
-                                    needing any bespoke prop or device.</p>
+                                <p>Prop-oriented World Rotation (POWR) is a VR interaction technique I conceived and
+                                    designed for my Master's dissertation. It maps objects from the user's physical
+                                    environment onto objects in the virtual world, so, for example, the bed in their room
+                                    stands in for a crate in the game. That gives the player real haptic feedback from
+                                    the virtual world without needing any bespoke prop or device.</p>
                                 <p>A game was developed to demonstrate this technique. The game is a shooter (similar to
                                     <i>Time Crisis</i>) where you shoot all the robots to advance to the next
                                     checkpoint. Each checkpoint has a virtual object the player uses for cover, scaled
                                     and mapped to a physical object in the user's room. The crate object is mapped to
                                     the bed, and any door object in the game is mapped to the room door.
                                 </p>
-                                <p>This project won the award for best poster/demo at the "VRST 2021" conference as
-                                    voted for by conference participants.</p>
+                                <p>The work won best poster/demo at the VRST 2021 conference, voted for by conference
+                                    participants, and was later published as a <a
+                                        href="https://link.springer.com/article/10.1007/s11042-024-18200-4">peer-reviewed
+                                        academic paper</a> in 2024.</p>
                                 <h3>Features</h3>
                                     <ul>
                                         <li>Implementation of "POWR" in a demonstration game.</li>
@@ -623,6 +392,247 @@
                         <a href="#research-projects">Return to top.</a>
                     </div>
                     <!--End of Research Section-->
+                    <h2 id="side-projects" class="page-title">Personal Projects</h2>
+                    <p class="section-intro">I like understanding games from first principles: how mechanics work, how design choices interact with technical capabilities, and how better tools make iteration faster. Here you can find some of the engines, editors and gameplay systems I have built in C++ while exploring those ideas.</p>
+                    <div id='project-banner-section'>
+                        <div class="project-banner">
+                            <a href="#project-container" onclick="showProject('project-sage')">
+                                <img class="project-banner-img" width="100%" src="img/projects/sage/01.png"
+                                    alt="SAGE editor entity inspector" />
+                                <div class="overlay">SAGE<br>(C++)</div>
+                            </a>
+                        </div>
+                        <div class="project-banner">
+                            <a href="#project-container" onclick="showProject('project-ray')">
+                                <img class="project-banner-img" width="100%" src="banners/raylib.jpg"
+                                    alt="Action RPG" />
+                                <div class="overlay">RPG Engine<br>(C++)</div>
+                            </a>
+                        </div>
+                        <div class="project-banner">
+                            <a href="#project-container" onclick="showProject('project-3d')">
+                                <img id="rend3d-banner-img" class="project-banner-img" width="100%"
+                                    src="banners/3drend.png" alt="3D Software Renderer" />
+                                <div class="overlay">3D Software Renderer<br>(C++)</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id='project-container'>
+                        <div class="project" id="project-sage">
+                            <div class="project-title">SAGE - C++ Engine &amp; Editor for Top-Down Point-and-Click Games (2026)</div>
+                            <div class="project-link"><a href="https://github.com/stevegwh/sage">See more on
+                                    GitHub</a></div>
+                            <div class="project-technologies">C++20, raylib, EnTT, Lua, sol2, cereal, ImGui</div>
+                            <div class="project-type">Personal Project</div>
+                            <div class="project-title-img-wrapper"><img class="project-title-img"
+                                    src="img/projects/sage/01.png" alt="SAGE editor entity inspector" /></div>
+                            <div class="project-description">
+                                <p>SAGE (Steve's Awesome Game Engine) is an engine and editor I built for the genres I
+                                    most want to design for: top-down RTS games, management sims and RPGs. The point of
+                                    the editor is design speed. I can lay out maps, place and wire up entities, script
+                                    behaviour and test changes in play mode without leaving the tool. Underneath it's a
+                                    reusable C++20 framework, but it exists to let me prototype and iterate on systemic
+                                    gameplay quickly.</p>
+                                <p>It started out as the engine behind my previous RPG engine example, but has since
+                                    been expanded significantly into a broader game framework with reusable runtime
+                                    systems, editor tooling, scripting, serialization, and an asset pipeline.</p>
+                                <h3>Standout Systems</h3>
+                                <ul class="impact-list">
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/editor/EditorScene.cpp">Integrated
+                                            editor</a> for building maps, placing entities, editing components, and
+                                        testing changes in play mode.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/NavigationGridSystem.cpp">Navigation</a>
+                                        and movement systems designed for point-and-click controls, including multi-tile
+                                        footprints, obstacle avoidance, and smooth actor turning.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/ScriptSystem.cpp">Lua
+                                            scripting</a> for entity behaviours, gameplay events, and <a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/ScriptSystem.hpp">project-specific
+                                            game APIs</a>.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/ui">Custom UI
+                                            framework</a> for in-game windows, tables, tooltips, drag-and-drop, and
+                                        themed HUD overlays.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/TerrainMesh.cpp">Terrain
+                                            tools</a> for sculpting heightfields, authoring navigation surfaces, and
+                                        aligning gameplay objects to the world.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/editor/EditorHistory.cpp">Editor
+                                            undo/redo history</a>, including hierarchy edits, component changes,
+                                        transforms, terrain sculpting, and multi-selection edits.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/CollisionSystem.cpp">Collision
+                                            and trigger system</a> with raycasts, box/mesh queries, collision layers,
+                                        and an editable collision matrix.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/RenderSystem.cpp">Rendering
+                                            stack</a> for dynamic models, skinned animation, emissive materials, skyboxes,
+                                        custom shaders, and particles.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/ResourceManager.cpp">Packed
+                                            asset</a> and <a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/Serializer.cpp">serialization
+                                            pipeline</a> for loading game resources, saving editor maps, and reusing
+                                        groups of entities as flatpacks.</li>
+                                </ul>
+                                <h3>Video</h3>
+                            </div>
+                            <div class="project-screenshot-wrapper">
+                                <div class="project-gallery">
+                                    <div class="gallery-video">
+                                        <iframe data-src="https://www.youtube.com/embed/yNF9LtaBrrs"
+                                            title="SAGE demonstration video" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <a class="gallery-item" href="img/projects/sage/02.png"><img
+                                            src="img/projects/sage/02.png" alt="SAGE editor terrain tools">
+                                        <div class="gallery-caption">Terrain sculpting and editor panels</div></a>
+                                    <a class="gallery-item" href="img/projects/sage/01.png"><img
+                                            src="img/projects/sage/01.png" alt="SAGE editor entity inspector">
+                                        <div class="gallery-caption">Entity hierarchy, inspector, and asset browser</div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Project-->
+                        <!-- Start of Project -->
+                        <div class="project" id="project-ray">
+                            <div class="project-title">'LeverQuest' - Custom C++ RPG Engine (from scratch) (2024)</div>
+                            <div class="project-link"><a href="https://github.com/stevegwh/raylib-arpg">See more on
+                                    GitHub</a></div>
+                            <div class="project-technologies">C++, raylib, entt</div>
+                            <div class="project-type">Personal Project</div>
+                            <div class="project-title-img-wrapper"><img class="project-title-img"
+                                    src="banners/leverquest.png" alt="LeverQuest" /></div>
+                            <div class="project-description">
+                                <p>A vertical slice of a systemic CRPG inspired by Baldur's Gate 3 and Divinity:
+                                    Original Sin 2, with its own gameplay framework (AI, UI, rendering and tooling) built
+                                    from scratch without Unity or Unreal.</p>
+                                <p>The objective of this project was to create a vertical slice of a Baldur's Gate
+                                    3/Divinity: Original Sin 2-inspired CRPG without using a game engine, such as Unity
+                                    or Unreal. Instead, I built the engine on top of the low-level 'raylib' library in
+                                    C++, primarily using raylib for window management and rendering. The goal was to
+                                    learn how to build systems and tools from scratch, which I take for granted when
+                                    using large-scale game engines, such as pathfinding, particle systems, visual
+                                    effects, or serialisation.</p>
+                                <p>In this demo, the player awakens in a cave and must navigate through a goblin cult
+                                    that has occupied an underground dungeon. The player must repair a lever that opens
+                                    their escape route through a series of quest chains to leave the dungeon area. Due
+                                    to this, the demo was dubbed 'LeverQuest.'</p>
+                                <h3>Standout Systems</h3>
+                                <ul class="impact-list">
+                                    <li>Dialogue and quest system built around a <a
+                                            href="https://raw.githubusercontent.com/stevegwh/raylib-arpg/refs/heads/main/resources/dialog/arissa.txt">custom
+                                            markup language</a>, so branching dialogue, <a
+                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/game/src/QuestManager.cpp">quest
+                                            logic</a> and <a
+                                            href="https://github.com/stevegwh/raylib-arpg/blob/main/game/utils/ParsingHelpers.cpp">conditionals</a>
+                                        can be authored as content without touching engine code.
+                                    </li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/ui">Custom
+                                            UI Library</a> imitating HTML table layout logic, including the ability to
+                                        drag and drop icons contextually.</li>
+                                    <li><a
+                                            href="https://github.com/stevegwh/sage/blob/main/engine/systems/NavigationGridSystem.cpp">Multi-unit
+                                            A*/BFS Pathfinding system</a> with navigation resolution.</li>
+                                </ul>
+                                <p>Additional systems include billboarded particles, JSON/Binary serialisation, lighting,
+                                    equippable inventory items, and a Blender-to-engine asset pipeline.</p>
+                                <h3>Video & Screenshots</h3>
+                            </div>
+                            <div class="project-screenshot-wrapper">
+                                <div class="project-gallery">
+                                    <div class="gallery-video">
+                                        <iframe data-src="https://www.youtube.com/embed/brtIjecU7UA?si=jje6rUembJxDemuq"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <a class="gallery-item" href="img/projects/rpg/4.png"><img
+                                            src="img/projects/rpg/4.png" alt="LeverQuest screenshot"></a>
+                                    <a class="gallery-item" href="img/projects/rpg/2.png"><img
+                                            src="img/projects/rpg/2.png" alt="LeverQuest screenshot"></a>
+                                    <a class="gallery-item" href="img/projects/rpg/5.png"><img
+                                            src="img/projects/rpg/5.png" alt="LeverQuest screenshot"></a>
+                                    <a class="gallery-item" href="img/projects/rpg/3.png"><img
+                                            src="img/projects/rpg/3.png" alt="LeverQuest screenshot"></a>
+                                    <a class="gallery-item" href="img/projects/rpg/1.png"><img
+                                            src="img/projects/rpg/1.png" alt="LeverQuest screenshot"></a>
+                                    <a class="gallery-item" href="img/projects/rpg/6.png"><img
+                                            src="img/projects/rpg/6.png" alt="LeverQuest screenshot"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Project-->
+                        <!-- Start of Project -->
+                        <div class="project" id="project-3d">
+                            <div class="project-title">3D Software Renderer (2024)</div>
+                            <div class="project-link"><a href="https://github.com/stevegwh/3DSoftwareRenderer">See more
+                                    on GitHub</a></div>
+                            <div class="project-technologies">C++, SDL</div>
+                            <div class="project-type">Personal Project</div>
+                            <div class="project-title-img-wrapper"><img class="project-title-img"
+                                    src="banners/3drend.png" alt="3D Software Renderer" /></div>
+                            <div class="project-description">
+                                <p>Implemented a full fixed-function rendering pipeline from scratch, including
+                                    rasterization, Z-buffering, shading, model loading, and texture filtering.</p>
+                                <p>A software renderer written from scratch in C++ and SDL. This was a challenge I'd
+                                    wanted to tackle since I first started making games, and a chance to dig into the
+                                    fundamentals of 3D rendering while sharpening my 3D maths and C++. It implements a
+                                    complete "fixed-function" pipeline, backed by a custom maths library and an OBJ/MTL
+                                    parser, with three scenes and a GUI for switching between shading method and texture
+                                    filtering.</p>
+                                <h3>Low-level Graphics & Maths</h3>
+                                    <ul class="impact-list">
+                                        <li>Custom vector/matrix maths libraries:
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/slib.cpp">slib</a></code>
+                                            and
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/smath.cpp">smath</a></code>.
+                                        </li>
+                                        <li>Model/material loading via
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/ObjParser.cpp">ObjParser</a></code>
+                                            for <code>obj</code> and <code>mtl</code> files.</li>
+                                        <li>Full rendering pipeline through
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Renderer.cpp">Renderer</a></code>
+                                            and triangle rasterization through
+                                            <code><a href="https://github.com/stevegwh/3DSoftwareRenderer/blob/main/src/Rasterizer.cpp">Rasterizer</a></code>.</li>
+                                    </ul>
+                                    <p>Additional support includes flat/Gouraud shading, nearest-neighbour and bilinear
+                                        texture filtering, directional lighting, texture atlases, scene controls, and
+                                        multithreaded processing.</p>
+                                    <h3>Video & Screenshots</h3>
+                            </div>
+                            <div class="project-screenshot-wrapper">
+                                <div class="project-gallery">
+                                    <div class="gallery-video">
+                                        <iframe data-src="https://www.youtube.com/embed/pFWjd4k_5mI?si=P4aPFlkJYW5w0sgB"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <a class="gallery-item" href="img/projects/3d/shading%20types.gif"><img
+                                            src="img/projects/3d/shading%20types.gif" alt="Flat vs Gouraud shading">
+                                        <div class="gallery-caption">Flat vs Gouraud Shading</div></a>
+                                    <a class="gallery-item" href="img/projects/3d/tex%20sampling%20types.gif"><img
+                                            src="img/projects/3d/tex%20sampling%20types.gif"
+                                            alt="Nearest neighbour vs bilinear filtering">
+                                        <div class="gallery-caption">Nearest Neighbour vs Bilinear Filtering</div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Project-->
+                    </div>
+                    <div id="project-return" class="project">
+                        <a href="#side-projects">Return to top.</a>
+                    </div>
+                    <!--End of Project Section-->
                     <h2 id="other-projects" class="page-title">Other Projects & Game Jams</h2>
                     <p class="section-intro">Smaller supporting projects and jam work.</p>
                     <div class="supporting-projects">

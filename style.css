@@ -75,6 +75,10 @@ body {
     margin-top: 2em;
 }
 
+#projects .page-title {
+    margin-top: 1.4em;
+}
+
 .intro {
     background-color: #0f0f0f;
     padding: 2em 0;
@@ -111,6 +115,94 @@ body {
     text-align: left;
 }
 
+.section-intro {
+    color: #999;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.featured-project {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 1.5em;
+    align-items: stretch;
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    margin-bottom: 1.5em;
+}
+
+.featured-project-img-wrapper {
+    display: block;
+    min-height: 280px;
+    background-color: #070707;
+}
+
+.featured-project-img {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    object-position: 78% center;
+}
+
+.featured-project-content {
+    padding: 1.5em 1.5em 1.5em 0;
+    color: #ccc;
+}
+
+.featured-project-content h3 {
+    font-size: 2em;
+    color: #ededed;
+    margin-bottom: 0.35em;
+}
+
+.featured-project-content h4 {
+    font-size: 1.1em;
+    color: #ededed;
+    margin-top: 1.2em;
+}
+
+.impact-list {
+    padding-left: 1.25em;
+}
+
+.impact-list li {
+    margin-bottom: 0.45em;
+}
+
+.impact-preamble {
+    margin-bottom: 0.5em;
+}
+
+.project-detail-link {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: #ededed;
+    background-color: #155f8f;
+    border-radius: 4px;
+    padding: 0.55em 0.8em;
+    font-weight: bold;
+}
+
+.project-detail-link:hover {
+    color: #fff;
+    background-color: #1b77b3;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .featured-project {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project-content {
+        padding: 0 1em 1.2em;
+    }
+}
+
 .projects-divider {
     border: none;
     border-top: 2px solid #ededed;
@@ -134,6 +226,33 @@ body {
     background-color: #000;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+#academic-intro {
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.supporting-projects {
+    margin-bottom: 2em;
+}
+
+.supporting-project-inner {
+    text-align: center;
+}
+
+.supporting-project-inner .project {
+    text-align: left;
+}
+
+.supporting-project-banner {
+    width: 200px;
+    height: 150px;
 }
 
 @media (max-width: 767px) {
@@ -204,6 +323,11 @@ body {
     height: 224px;
 }
 
+.project-screenshot-contain {
+    object-fit: contain;
+    background-color: #050505;
+}
+
 @media (min-width: 576px) {
     .project-screenshot {
         height: 336px;
@@ -262,10 +386,6 @@ body {
     .carousel-control-next {
         right: -3rem;
     }
-
-    .project-screenshot-wrapper {
-        padding: 1em 3.75rem;
-    }
 }
 
 @media (max-width: 47.9375em) {
@@ -276,10 +396,119 @@ body {
     .carousel-control-next {
         right: 0.625rem;
     }
+}
 
-    .project-screenshot-wrapper {
-        padding: 1em;
-    }
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.5em;
+}
+
+.gallery-video {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    background-color: #050505;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gallery-video iframe {
+    min-width: 321px;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.gallery-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid #c9a64a;
+    border-radius: 4px;
+    background-color: #050505;
+    box-shadow: 0 0 0 1px rgba(255, 232, 151, 0.18);
+    cursor: zoom-in;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-caption {
+    display: none;
+}
+
+.image-focus-window {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+.image-focus-window.is-open {
+    display: flex;
+}
+
+.image-focus-panel {
+    position: relative;
+    width: min(92vw, 860px);
+    max-height: 88vh;
+    padding: 2.5em 0.8em 0.8em;
+    background-color: #0f0f0f;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+    box-shadow: 0 12px 38px rgba(0, 0, 0, 0.55);
+}
+
+.image-focus-close {
+    position: absolute;
+    top: 0.55em;
+    right: 0.65em;
+    width: 2em;
+    height: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 4px;
+    background-color: #000;
+    color: #ededed;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-focus-close:hover,
+.image-focus-close:focus {
+    background-color: #1b77b3;
+    color: #fff;
+    outline: none;
+}
+
+.image-focus-img {
+    display: block;
+    width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    background-color: #050505;
+}
+
+.image-focus-caption {
+    margin-top: 0.65em;
+    color: #ccc;
+    font-size: 0.9em;
+    text-align: center;
 }
 
 .carousel-control-prev:focus,
@@ -295,6 +524,10 @@ body {
 }
 
 #project-banner-section {
+    text-align: center;
+}
+
+#academic-banner-section {
     text-align: center;
 }
 
@@ -317,8 +550,20 @@ body {
     margin-left: -30px;
 }
 
+#project-banner-section .project-banner-img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    object-fit: cover;
+}
+
+#project-banner-section .project-banner {
+    width: 320px;
+    height: 220px;
+}
+
 #rend3d-banner-img {
-    margin-left: 10px;
+    object-position: center;
 }
 
 .project-banner .overlay {
@@ -333,6 +578,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     opacity: 0;
     transition: opacity 0.3s;
 }

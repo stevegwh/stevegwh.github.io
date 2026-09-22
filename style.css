@@ -3,7 +3,7 @@ body {
     justify-content: center;
     background-color: #070707;
     background-image: url("img/mac-tex.png");
-    background-size: 64px;
+    background-size: 384px;
 }
 
 .page-container {
@@ -61,6 +61,15 @@ body {
 
 .social-link {
     margin-left: 0.5em;
+}
+
+.social-link a {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.social-link a:hover {
+    text-decoration: none;
 }
 
 #page-navigation {
@@ -138,14 +147,17 @@ body {
     display: block;
     min-height: 280px;
     background-color: #070707;
+    overflow: hidden;
 }
 
 .featured-project-img {
+    display: block;
     width: 100%;
     height: 100%;
     min-height: 280px;
     object-fit: cover;
-    object-position: 78% center;
+    object-position: 50% center;
+    transform: translateY(-8%) scale(1.22);
 }
 
 .featured-project-content {
@@ -474,6 +486,10 @@ body {
     box-shadow: 0 12px 38px rgba(0, 0, 0, 0.55);
 }
 
+.image-focus-panel:focus {
+    outline: none;
+}
+
 .image-focus-close {
     position: absolute;
     top: 0.55em;
@@ -494,6 +510,53 @@ body {
     background-color: #1b77b3;
     color: #fff;
     outline: none;
+}
+
+.image-focus-nav {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 2.5rem;
+    height: 3.5rem;
+    padding: 0;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-focus-prev {
+    left: 1.1rem;
+}
+
+.image-focus-next {
+    right: 1.1rem;
+}
+
+.image-focus-nav:hover,
+.image-focus-nav:focus {
+    background-color: #1b77b3;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+@media (max-width: 575px) {
+    .image-focus-nav {
+        width: 2.25rem;
+        height: 3rem;
+    }
+
+    .image-focus-prev {
+        left: 0.9rem;
+    }
+
+    .image-focus-next {
+        right: 0.9rem;
+    }
 }
 
 .image-focus-img {
@@ -523,12 +586,11 @@ body {
     padding: 0.625rem;
 }
 
-#project-banner-section {
-    text-align: center;
-}
-
+#project-banner-section,
 #academic-banner-section {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5em;
 }
 
 .project-banner {
@@ -538,6 +600,13 @@ body {
     height: 200px;
     overflow: hidden;
     border-radius: 5%;
+}
+
+#project-banner-section .project-banner,
+#academic-banner-section .project-banner {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 4;
 }
 
 .project-banner:hover {
@@ -550,16 +619,16 @@ body {
     margin-left: -30px;
 }
 
-#project-banner-section .project-banner-img {
+#project-banner-section .project-banner-img,
+#academic-banner-section .project-banner-img {
     width: 100%;
     height: 100%;
     margin-left: 0;
     object-fit: cover;
 }
 
-#project-banner-section .project-banner {
-    width: 320px;
-    height: 220px;
+#project-banner-section .sage-banner-img {
+    transform: scale(1.12);
 }
 
 #rend3d-banner-img {

@@ -47,7 +47,10 @@ function showProject(elementId) {
     }
 
     for (var i = 0; i < projectList.length; i++) {
-        projectList[i].style.display = 'none';
+        // Brighter Shores is the permanent featured section at the top of the page.
+        if (projectList[i].id !== 'project-brightershores') {
+            projectList[i].style.display = 'none';
+        }
     }
 
     targetElement.style.display = 'block';
@@ -76,7 +79,9 @@ function hideProject(returnTargetId) {
     documentElement.style.overflowAnchor = 'none';
 
     for (var i = 0; i < projectList.length; i++) {
-        projectList[i].style.display = 'none';
+        if (projectList[i].id !== 'project-brightershores') {
+            projectList[i].style.display = 'none';
+        }
     }
 
     try {

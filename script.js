@@ -127,11 +127,12 @@ function initImageFocusWindow() {
     focusWindow.setAttribute('aria-hidden', 'true');
 
     focusWindow.innerHTML =
-        '<div class="image-focus-panel" role="dialog" aria-modal="true" aria-label="Focused image" tabindex="-1">' +
-            '<button class="image-focus-close" type="button" aria-label="Close focused image">X</button>' +
-            '<button class="image-focus-nav image-focus-prev" type="button" aria-label="Previous screenshot">&#10094;</button>' +
-            '<img class="image-focus-img" src="" alt="">' +
-            '<button class="image-focus-nav image-focus-next" type="button" aria-label="Next screenshot">&#10095;</button>' +
+        '<div class="image-focus-panel" role="dialog" aria-modal="true" aria-label="Focused media" tabindex="-1">' +
+            '<button class="image-focus-close" type="button" aria-label="Close focused media">X</button>' +
+            '<button class="image-focus-nav image-focus-prev" type="button" aria-label="Previous media">&#10094;</button>' +
+            '<img class="image-focus-img" alt="" hidden>' +
+            '<video class="image-focus-video" controls playsinline preload="metadata" hidden></video>' +
+            '<button class="image-focus-nav image-focus-next" type="button" aria-label="Next media">&#10095;</button>' +
             '<div class="image-focus-caption"></div>' +
         '</div>';
 
@@ -139,6 +140,7 @@ function initImageFocusWindow() {
 
     var focusPanel = focusWindow.querySelector('.image-focus-panel');
     var focusImage = focusWindow.querySelector('.image-focus-img');
+    var focusVideo = focusWindow.querySelector('.image-focus-video');
     var focusCaption = focusWindow.querySelector('.image-focus-caption');
     var closeButton = focusWindow.querySelector('.image-focus-close');
     var previousButton = focusWindow.querySelector('.image-focus-prev');
@@ -147,12 +149,22 @@ function initImageFocusWindow() {
     var currentGalleryItems = [];
     var currentGalleryIndex = 0;
 
+    function resetVideo() {
+        focusVideo.pause();
+        focusVideo.removeAttribute('src');
+        focusVideo.removeAttribute('poster');
+        focusVideo.load();
+        focusVideo.hidden = true;
+    }
+
     function closeFocusWindow() {
+        resetVideo();
         closeButton.blur();
         focusWindow.classList.remove('is-open');
         focusWindow.setAttribute('aria-hidden', 'true');
         focusImage.removeAttribute('src');
         focusImage.alt = '';
+        focusImage.hidden = true;
         focusCaption.textContent = '';
         currentGalleryItems = [];
         currentGalleryIndex = 0;
@@ -166,14 +178,40 @@ function initImageFocusWindow() {
     function showGalleryItem(item) {
         var image = item.querySelector('img');
         var caption = item.querySelector('.gallery-caption');
+        var mediaItem = item.closest('.gallery-media-item');
+        if (!caption && mediaItem) {
+            caption = mediaItem.querySelector('.gallery-caption');
+        }
 
         if (!image) {
             return;
         }
 
-        focusImage.src = item.getAttribute('href') || image.src;
-        focusImage.alt = image.alt || 'Focused project image';
-        focusCaption.textContent = caption ? caption.textContent : '';
+        resetVideo();
+        focusImage.removeAttribute('src');
+        focusImage.hidden = item.getAttribute('data-media-type') === 'video';
+        if (focusImage.hidden) {
+            focusVideo.src = item.getAttribute('href');
+            focusVideo.poster = image.src;
+            focusVideo.setAttribute('aria-label', image.alt || 'Project video');
+            focusVideo.hidden = false;
+            var playback = focusVideo.play();
+            if (playback) {
+                playback.catch(function() {
+                    // Playback controls remain available when automatic playback is blocked.
+                });
+            }
+        }
+        else {
+            focusImage.src = item.getAttribute('href') || image.src;
+            focusImage.alt = image.alt || 'Focused project image';
+        }
+        focusCaption.textContent = '';
+        if (caption) {
+            for (var i = 0; i < caption.childNodes.length; i++) {
+                focusCaption.appendChild(caption.childNodes[i].cloneNode(true));
+            }
+        }
         focusCaption.style.display = focusCaption.textContent ? 'block' : 'none';
     }
 
@@ -229,11 +267,11 @@ function initImageFocusWindow() {
         if (event.key === 'Escape') {
             closeFocusWindow();
         }
-        else if (event.key === 'ArrowLeft') {
+        else if (event.key === 'ArrowLeft' && !focusVideo.contains(event.target)) {
             event.preventDefault();
             navigateGallery(-1);
         }
-        else if (event.key === 'ArrowRight') {
+        else if (event.key === 'ArrowRight' && !focusVideo.contains(event.target)) {
             event.preventDefault();
             navigateGallery(1);
         }

@@ -131,7 +131,7 @@ function initImageFocusWindow() {
             '<button class="image-focus-close" type="button" aria-label="Close focused media">X</button>' +
             '<button class="image-focus-nav image-focus-prev" type="button" aria-label="Previous media">&#10094;</button>' +
             '<img class="image-focus-img" alt="" hidden>' +
-            '<video class="image-focus-video" controls playsinline preload="metadata" hidden></video>' +
+            '<video class="image-focus-video" controls playsinline loop preload="metadata" hidden></video>' +
             '<button class="image-focus-nav image-focus-next" type="button" aria-label="Next media">&#10095;</button>' +
             '<div class="image-focus-caption"></div>' +
         '</div>';
